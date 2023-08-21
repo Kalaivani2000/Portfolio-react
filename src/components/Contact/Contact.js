@@ -9,49 +9,54 @@ const Contact = () => {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="project-heading" style={{textAlign:"center" }}>
           Contact<strong className="purple">Us</strong>
         </h1>
-        <Row>
-          <Col md="6" className="contact-sec" style={{ color: "white" }}>
-            <ul className="footer-icons">
-              <li className="social2-icons">
+        <Row> 
+          <Col md={12}className="contact-sec" style={{ color: "white",textAlign:"center" }}>
+
+            <h2>Address</h2>
+            <p>Chennai,TamilNadu</p>
+            {/* <span>9092983891</span> */}
+          </Col>
+          
+          <Col md={12} className="home-about-social">
+            <h1>FIND ME ON</h1>
+            <p>
+              Feel free to <span className="purple">connect </span>with me
+            </p>
+            <ul className="home-about-social-links">
+              <li className="social-icons">
                 <a
-                  href="https://github.com/Kalaivani2000"
-                  style={{ color: "white" }}
+                  href="https://github.com/Kalaivani2000/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
                 >
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social2-icons">
+              <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/kalaivani-c-profile/"
-                  style={{ color: "white" }}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
                 >
                   <FaLinkedinIn />
                 </a>
               </li>
-              <li className="social2-icons">
+              <li className="social-icons">
                 <a
                   href="mailto:kalaivani.c2000@gmail.com"
-                  style={{ color: "white" }}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
                 >
                   <AiOutlineMail />
                 </a>
               </li>
             </ul>
-
-            <h2>Address</h2>
-            <p>no.481,7th block,Mugappair-west,Chennai-37</p>
-            <span>9092983891</span>
-          </Col>
-
-          <Col md="6" className="iframe">
-            <Contact2 />
           </Col>
         </Row>
       </Container>

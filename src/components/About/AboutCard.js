@@ -17,10 +17,6 @@ function AboutCard() {
             <br />
             <br />
           </p>
-          {/* <p style={{ color: "rgb(155 126 172)" }}>
-          “You've got to learn to leave the table when love's no longer being served.”{" "}
-          </p> */}
-          {/* <footer className="blockquote-footer">Kalaivani</footer> */}
         </blockquote>
       </Card.Body>
     </Card>
