@@ -1,104 +1,92 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-  AiFillContacts,
-} from "react-icons/ai";
-import { CgFileDocument } from "react-icons/cg";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import LightDarkMode from "./LightDarkMode";
 
-export default function Demonavbar() {
+const Demonavbar = () => {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
+  window.addEventListener("scroll", scrollHandler);
   return (
-    <div>
-      <div
-        expanded={expand}
-        fixed="top"
-        expand="md"
-        className={navColour ? "sticky" : "navbar"}
-      >
+    <>
+    {/* <Navbar
+      expanded={expand}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
+    ></Navbar> */}
+      <Navbar collapseOnSelect expand="md" fixed="top"  className={navColour ? "sticky" : "navbar"}>
         <Container>
-          <Navbar.Brand href="/" className="d-flex">
-            <h2>Kalaivani</h2>&nbsp;
-            <LightDarkMode/>
-          </Navbar.Brand>
-          {/* <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            onClick={() => {
-              updateExpanded(expand ? false : "expanded");
-            }}
+          <updateNavbar/>
+          <Navbar.Brand
+            eventKey={5}
+            href="#home"
+            style={{ fontSize: "2rem", marginLeft: "50px" }}
           >
-            <span></span>
-            <span></span>
-            <span></span>
-          </Navbar.Toggle> */}
+            Kalaivani
+          </Navbar.Brand>
+          {/* <LightDarkMode/> */}
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" i class="fa-solid fa-bars"
+          onClick={() => {
+            updateExpanded(expand ? false : "expanded");
+          }}/>
+           <span></span>
+          <span></span>
+          <span></span>
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto" defaultActiveKey="#home">
-              <Nav.Item>
-                {/* <Link
-                  as={Link}
-                  to="/"
-                  onClick={() => updateExpanded(false)}
-                >
-                  <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-                </Link> */}
+            <Nav className="me-auto">
+            <Nav.Item>
+              <Nav.Link eventKey={2} href="#home"> 
+                Home
+              </Nav.Link>
               </Nav.Item>
 
               <Nav.Item>
-                {/* <Link
-                  as={Link}
-                  to="/about"
-                  onClick={() => updateExpanded(false)}
-                >
-                  <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-                </Link> */}
+              <Nav.Link eventKey={2} href="#about"> 
+                About
+              </Nav.Link>
               </Nav.Item>
 
               <Nav.Item>
-                {/* <Link
-                  as={Link}
-                  to="/project"
-                  onClick={() => updateExpanded(false)}
-                >
-                  <AiOutlineFundProjectionScreen
-                    style={{ marginBottom: "2px" }}
-                  />{" "}
-                  Projects
-                </Link> */}
+              <Nav.Link eventKey={2} href="#projects">
+                Projects
+              </Nav.Link>
               </Nav.Item>
 
               <Nav.Item>
-                {/* <Link
-                  as={Link}
-                  to="/resume"
-                  onClick={() => updateExpanded(false)}
-                >
-                  <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-                </Link> */}
+              <Nav.Link eventKey={2} href="#resume"> 
+                Resume
+              </Nav.Link>
               </Nav.Item>
 
               <Nav.Item>
-                {/* <NavLink 
-                  as={Link}
-                  to="/contact"
-                  onClick={() => updateExpanded(false)} 
-                > 
-                  <AiFillContacts style={{ marginBottom: "2px" }} /> Contacts
-                </NavLink> */}
+              <Nav.Link eventKey={2} href="#contact">
+                Contact
+              </Nav.Link>
               </Nav.Item>
+              
+              {/* <Nav.Item>
+              <Nav.Link eventKey={2} href="#"> */}
+              <div id="google_translate_element"></div>
+              {/* </Nav.Link>
+              </Nav.Item> */}
+              
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </div>
-    </div>
+      </Navbar>
+    </>
   );
-}
+};
+
+export default Demonavbar;

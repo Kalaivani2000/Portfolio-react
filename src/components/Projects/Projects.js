@@ -23,7 +23,7 @@ function Projects() {
             <ProjectCard
              imgPath={Project1}
               title="Presento-template"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description="Presento is a modern, creative and clean HTML corporate Bootstrap template. It can be used for building elegant and modern corporate websites, small business homepages, app landing pages, startup website, software & SaaS company websites. Comes with all the necessary pages and elements to build a stunning website with no time."
                ghLink="https://github.com/Kalaivani2000/fabevy-website-1"
                demoLink="https://kalaivani2000.github.io/fabevy-website-1"
             />
@@ -33,7 +33,7 @@ function Projects() {
             <ProjectCard
               imgPath={Project2}
               title="Arsha-template"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              description="Arsha is a clean and modern business Bootstrap template designed specifically for startup, apps and IT services.You will be able to showcase your content on mobile devices such as smartphones, tablets and all types of devices. Arsha's design is driven by minimalist and unique sections."
               ghLink="https://github.com/Kalaivani2000/website-2-fabevy"
               demoLink="https://kalaivani2000.github.io/website-2-fabevy/"
             />
@@ -42,8 +42,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={Project3}
-              title="linkdin"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
+              title="LinkdIn"
+              description="LinkdIn project is done in Html,CSS,Bootstrap and Javascript.The project has login page,signup page and linkdin page.Looking to utilize my technology and leadership skills in an esteemed organization. Well versed with research-oriented marketing abilities and product analysis."
               ghLink="https://github.com/Kalaivani2000/task-3-js"   
               demoLink="https://kalaivani2000.github.io/task-3-js/"           
             />
@@ -53,7 +53,7 @@ function Projects() {
             <ProjectCard
               imgPath={Project4}
               title="Todo-list"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
+              description="To-Do List project is an application specially built to keep track of errands or tasks that need to be done. This application will be like a task keeper where the user would be able to enter the tasks that they need to do."
               ghLink="https://github.com/Kalaivani2000/Todo-list-js"
               demoLink="https://kalaivani2000.github.io/Todo-list-js/"
              
